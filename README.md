@@ -1,2 +1,2 @@
-# MQMnote
-A simple quantum mechanics learning note.
+# 从电子自旋窥见量子力学
+笔者在完成老师交代的学习任务时同步做的一份笔记
