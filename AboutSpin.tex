@@ -709,7 +709,7 @@
 		\newpage
 	\section{简化的一维海森堡模型}
 		\subsection{模型构建与分析}
-		简化的一维海森堡模型只考虑相邻自旋的相互作用，且作用系数为$1$，开放边界条件。所以对于一维自旋$\frac{1}{2}$链，哈密顿算子写为如下形式
+		简化的一维海森堡模型只考虑相邻自旋的相互作用，且作用系数为$1$，开放边界条件\footnote{还可以考虑周期边界条件，即考虑最后一个自旋和第一个自旋相互作用，分析方法与开放边界条件一致。}。所以对于一维自旋$\frac{1}{2}$链，哈密顿算子写为如下形式
 		\begin{snugshade}
 			\begin{equation}
 				\begin{aligned}
@@ -845,9 +845,9 @@
 	\end{snugshade}
 
 	依然以4个自旋相互作用为例，式\ref{example}将变换为
-	\begin{snugshade}
 		\begin{tiny}
 			\begin{equation}
+				\nonumber
 				\left[\begin{array}{r|rrrr|rrrrrr|rrrr|r}
 					0.75&0&0&0&0&0&0&0&0&0&0&0&0&0&0&0\\
 					\hline
@@ -870,10 +870,8 @@
 					\hline
 					0&0&0&0&0&0&0&0&0&0&0&0&0&0&0&0.75
 				\end{array}\right]
-				\label{exampleChange}
 			\end{equation}
 		\end{tiny}
-	\end{snugshade}
 	
 	在式\ref{blocks}中我们已经把哈密顿算子的本征态分到了不同的子空间，即算子\\$\mathcal M_{\frac{L}{2}},\mathcal M_{\frac{L}{2}-1},\dots,\mathcal M_{-\frac{L}{2}}$的本征空间中。现在我们来研究不同子空间之间的本征态的能量关系。用$\Ket{\psi^i_m}$来表示处于$\mathcal M_m$本征空间中、哈密顿算子的第$i$个本征态。由式\ref{symmetricRaise}
 	\begin{align*}
@@ -883,7 +881,7 @@
 						   &= E^i_{m+1}\Ket{\psi^i_{m+1}}
 	\end{align*}
 	
-	令升算符从$\mathcal M_{-\frac{L}{2}}$的本征空间开始作用，我们发现哈密顿算子在$\mathcal M_{-\frac{L}{2}+1}$的本征空间的本征值一定包含在$\mathcal M_{-\frac{L}{2}}$的本征空间中的本征值。于是我们发现哈密顿算子在$\mathcal M_0$的本征空间(式\ref{exampleChange}中间最大的块)下的本征值包含了$\mathcal H$所有的本征值，这个空间是$\binom{L}{\frac{L}{2}}$维的，运算得以被简化。
+	令升算符从$\mathcal M_{-\frac{L}{2}}$的本征空间开始作用，我们发现哈密顿算子在$\mathcal M_{-\frac{L}{2}+1}$的本征空间的本征值一定包含在$\mathcal M_{-\frac{L}{2}}$的本征空间中的本征值。于是我们发现哈密顿算子在$\mathcal M_0$的本征空间(其矩阵表示为式\ref{blocks}中间最大的块$M_0$)下的本征值包含了$\mathcal H$所有的本征值，这个空间是$\binom{L}{\frac{L}{2}}$维的，运算得以被简化。
 	
 	在$\mathcal M_0$的本征空间里我们发现$\mathcal S^z$算子的本征值为$0$，那么可以认为在$\mathcal M_0$的本征空间内$\mathcal S^z = \mathcal O$。那么有
 	\begin{snugshade}
